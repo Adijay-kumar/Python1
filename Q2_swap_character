@@ -1,0 +1,7 @@
+x=input("Enter a character in x:")
+y=input("Enter a character in y:")
+a=x
+x=y
+y=a
+print(x)
+print(y)
