@@ -1,5 +1,0 @@
-x=int(input("Enter a integar in x:"))
-y=int(input("Enter a integar in y:"))
-z=int(input("Enter a integar in z:"))
-a=x+y+z
-print("The sum of",x,",",y,",",z,"is",a)

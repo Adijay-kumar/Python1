@@ -1,0 +1,69 @@
+print("What would you like to perform?")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+print("5. Floor Division")
+print("6. Remainder after Division")
+
+ch = int(input("Enter your choice: "))
+
+def add():
+    n = int(input("Enter how many integers you want to sum: "))
+    total = 0
+    for i in range(n):
+        x = int(input("Enter number: "))
+        total += x
+    print("The sum is:", total)
+
+def sub():
+    n = int(input("Enter how many integers you want to subtract: "))
+    result = int(input("Enter the first number: "))
+    for i in range(n - 1):
+        x = int(input("Enter the next number: "))
+        result -= x
+    print("The result after subtraction is:", result)
+
+def mul():
+    n = int(input("Enter how many integers you want to multiply: "))
+    result = int(input("Enter the first number: "))
+    for i in range(n - 1):
+        x = int(input("Enter the next number: "))
+        result *= x
+    print("The result of multiplication is:", result)
+
+def div():
+    a = int(input("Enter the dividend: "))
+    b = int(input("Enter the divisor: "))
+    if b == 0:
+        print("Division by zero is not possible.")
+    else:
+        result = a / b
+        print("The result of division is:", result)
+
+def fdiv():
+    a = int(input("Enter the dividend: "))
+    b = int(input("Enter the divisor: "))
+    result = a // b
+    print("The result of floor division is:", result)
+
+def rem():
+    a = int(input("Enter the dividend: "))
+    b = int(input("Enter the divisor: "))
+    result = a % b
+    print("The remainder is:", result)
+
+if ch == 1:
+    add()
+elif ch == 2:
+    sub()
+elif ch == 3:
+    mul()
+elif ch == 4:
+    div()
+elif ch == 5:
+    fdiv()
+elif ch == 6:
+    rem()
+else:
+    print("Invalid choice.")
