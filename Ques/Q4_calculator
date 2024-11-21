@@ -5,6 +5,7 @@ print("3. Multiplication")
 print("4. Division")
 print("5. Floor Division")
 print("6. Remainder after Division")
+print("7. Exponentiation")
 
 ch = int(input("Enter your choice: "))
 
@@ -44,14 +45,24 @@ def div():
 def fdiv():
     a = int(input("Enter the dividend: "))
     b = int(input("Enter the divisor: "))
-    result = a // b
-    print("The result of floor division is:", result)
+    if b == 0:
+        print("Division by zero is not possible.")
+    else:
+        result = a // b
+        print("The result of Floor division is:", result)
+    
 
 def rem():
     a = int(input("Enter the dividend: "))
     b = int(input("Enter the divisor: "))
     result = a % b
     print("The remainder is:", result)
+def exp():
+    a = int(input("Enter the number whose power you want : "))
+    b = int(input("Enter the power: "))
+    result = a**b
+    print("The",a,"raise to the power",b,"is:",result)
+
 
 if ch == 1:
     add()
@@ -65,5 +76,7 @@ elif ch == 5:
     fdiv()
 elif ch == 6:
     rem()
+elif ch == 7:
+    exp()
 else:
     print("Invalid choice.")
