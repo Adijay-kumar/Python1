@@ -1,0 +1,7 @@
+n = float(input("Enter amount of gas in moles: "))
+v = float(input("Enter volume of cylinder in litre: "))
+t = float(input("Enter Temprature of gas in celcius: "))
+r = 0.0821
+T = t + 273
+p = (n*r*T)/v
+print(f"The Pressure in cylinder will be: {p} atm")

@@ -1,0 +1,3 @@
+a = float(input("Enter how much USD you have: "))
+b = a * 84.52
+print(f"You will have {b} in INR")

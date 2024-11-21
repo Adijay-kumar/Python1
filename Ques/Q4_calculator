@@ -57,6 +57,7 @@ def rem():
     b = int(input("Enter the divisor: "))
     result = a % b
     print("The remainder is:", result)
+    
 def exp():
     a = int(input("Enter the number whose power you want : "))
     b = int(input("Enter the power: "))
