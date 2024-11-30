@@ -1,0 +1,13 @@
+def reverse_number(n):
+    reversed_num = 0
+    while n >= 1:
+        last_digit = n % 10
+        reversed_num = reversed_num * 10 + last_digit
+        n //= 10
+    return reversed_num
+
+number = int(input("Enter a number whom you want to be reversed: "))
+if number < 0:
+    print("No negative number please!")
+else:
+    print("Reversed number:", reverse_number(number))

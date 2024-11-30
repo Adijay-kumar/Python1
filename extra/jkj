@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth with No Gravity</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gravityFreeCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('gravityFreeCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas dimensions
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Create objects
+        const numObjects = 50;
+        const objects = Array.from({ length: numObjects }, () => ({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            dx: (Math.random() - 0.5) * 2, // Random horizontal velocity
+            dy: (Math.random() - 0.5) * 2, // Random vertical velocity
+            radius: Math.random() * 5 + 2 // Random size for objects
+        }));
+
+        // Update and draw objects
+        function update() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            objects.forEach(obj => {
+                // Update position
+                obj.x += obj.dx;
+                obj.y += obj.dy;
+
+                // Wrap around edges
+                if (obj.x > canvas.width) obj.x = 0;
+                if (obj.x < 0) obj.x = canvas.width;
+                if (obj.y > canvas.height) obj.y = 0;
+                if (obj.y < 0) obj.y = canvas.height;
+
+                // Draw the object
+                ctx.beginPath();
+                ctx.arc(obj.x, obj.y, obj.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'skyblue';
+                ctx.fill();
+                ctx.closePath();
+            });
+
+            requestAnimationFrame(update);
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Start the animation
+        update();
+    </script>
+</body>
+</html>
