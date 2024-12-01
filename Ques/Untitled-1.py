@@ -1,6 +1,8 @@
-a = int(input("Enter the start number"))
-b = int(input("Enter the end number"))
-for i in range(a,b):
-    for j in range(a,b):
-        if i%j == 0 and i%1 == 0:
-    print(i)
+a = int(input("Enter the number you want to check is it prime or not: "))
+for i in range(2,a):
+    if a%i != 0:
+        print("Yes",a,"is a Prime number")
+        break
+    else:
+        print("No",a,"is not a Prime number")
+        break
