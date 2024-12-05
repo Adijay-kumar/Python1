@@ -43,7 +43,7 @@ def take_order():
         item = input("Enter the item you want to order (or 'done' to finish): ")
         if item == "done":
             break
-        if item not in menu:
+        if item not in menu1:
             print("Sorry, we don't have that item.")
             continue
         quantity = int(input("Enter the quantity: "))
@@ -59,7 +59,7 @@ def take_order():
 def calculate_bill(order):
     total = 0
     for item, quantity in order.items():
-        total += menu[item] * quantity
+        total += menu1[item] * quantity
     return total
 
 # User interface
@@ -85,7 +85,7 @@ def user_interface():
             cust_no=int(input("Enter Customer Contact Number"))
             pay=input("Mode of Paymet[UPI/Card/Cash]")
             order_number=int(input("Enter Order Number"))
-            if pay=='Cash':
+            if pay=='cash':
                 x=int(input("Enter Cash Received"))
                 y=int(input("Enter Change given"))
                 bill = calculate_bill(order)

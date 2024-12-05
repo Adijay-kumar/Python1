@@ -10,31 +10,15 @@ menu = {
     "Mac Cheese Burger":69,
     "Chicken Burger":69,
     "Hardcore Hazzlenut cone":49,
-    "Creampie Vanilla cone":39,
-    "Racist Chocolate":29,
+    "Creamy Vanilla cone":39,
+    "Chocolate cone":29,
     "Small fries":39,
     "Medium fries":59,
     "Large fries":69,
     "Cheesy fries":79,
 }
-menu1 = {
-    "1": 79,
-    "2": 59,
-    "3": 99,
-    "4":49,
-    "5":79,
-    "6":69,
-    "7":69,
-    "8":49,
-    "9":39,
-    "10":29,
-    "11":39,
-    "12":59,
-    "13":69,
-    "14":79,
-}
 #crew
-crew="Manoj Bajpai"
+crew="xyz"
 crew_id=9075663
 # Taking customer order
 def take_order():
