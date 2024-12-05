@@ -1,0 +1,13 @@
+a=[2,4,5,3,9,7]
+b=a[0]
+c=a[1]
+for i in range(0,len(a)-1):
+    if b<a[i]:
+        c=b
+        b=a[i]
+d=b
+for j in range(0,len(a)):
+    if c<a[j] and a[j]!=d:
+        c=a[j]
+print(b)
+print(c)
