@@ -1,0 +1,8 @@
+a=" "
+n=int(input("Enter a number: "))
+j=n
+for i in range(n):
+    c="* "*i
+    d=a*j
+    j-=1
+    print(d,c)
